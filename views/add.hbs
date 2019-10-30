@@ -1,1 +1,17 @@
 <h1>add movie</h1>
+<form action="/add" method="POST">
+    <div class="input-field">
+        <input id="movie_name" name="title" type="text" class="validate" required>
+        <label for="movie_name">Movie title</label>
+    </div>
+    <div class="input-field">
+        <textarea id="description" name="description" class="materialize-textarea" required></textarea>
+        <label for="description">Description</label>
+
+    </div>
+    <div class="input-field">
+        <input id="img" name="img" type="text" class="validate" required>
+        <label for="img">URL IMG</label>
+    </div>
+    <button class="btn">Submit</button>
+</form>
