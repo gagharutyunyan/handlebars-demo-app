@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require("path");
 const exphbs = require("express-handlebars");
 const app = express();
 
@@ -12,12 +11,24 @@ app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
 app.set("views", "views");
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {
+    title: "Home page"
+  });
 });
 
-app.get("/about", (req, res) => {
-  res.render("about");
+app.get("/movies", (req, res) => {
+  res.render("movies", {
+    title: "All added movies"
+  });
+});
+
+app.get("/add", (req, res) => {
+  res.render("add", {
+    title: "adding movie"
+  });
 });
 
 const PORT = process.env.PORT || 3000;
