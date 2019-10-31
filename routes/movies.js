@@ -1,10 +1,13 @@
 const { Router } = require("express");
+const Movie = require("../models/movie");
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.render("movies", {
+router.get("/", async (req, res) => {
+  const allTheMovies = await Movie.getAll();
+  res.render("index", {
     title: "All added movies",
-    isMovie: true
+    isMovie: true,
+    allTheMovies
   });
 });
 

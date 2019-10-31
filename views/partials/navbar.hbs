@@ -2,22 +2,16 @@
     <div class="nav-wrapper">
         <a href="/" class="brand-logo">Handlebars demo page</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            {{#if isHome}}
-            <li class="active"><a href="/">Home page</a></li>
-            {{else}}
-            <li><a href="/">Home page</a></li>
-            {{/if}}
-
             {{#if isMovie}}
-            <li class="active"><a href="/movies">Films</a></li>
+            <li class="active"><a href="/">Movies</a></li>
             {{else}}
-            <li><a href="/movies">Films</a></li>
+            <li><a href="/">Movies</a></li>
             {{/if}}
 
             {{#if isAdd}}
-            <li class="active"><a href="/add">Add film</a></li>
+            <li class="active"><a href="/add">Add movie</a></li>
             {{else}}
-            <li><a href="/add">Add film</a></li>
+            <li><a href="/add">Add movie</a></li>
             {{/if}}
         </ul>
     </div>
